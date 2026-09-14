@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hotel Atithi | Pure Veg Restaurant & Catering in Ballari</title>
+  <meta name="description" content="Hotel Atithi is a pure vegetarian restaurant in Ballari offering traditional South Indian food, authentic thali, breakfast, North Indian cuisine, catering services and an A/C party hall.">
+  <meta name="keywords" content="Hotel Atithi Ballari, pure veg restaurant Ballari, vegetarian restaurant Ballari, South Indian thali Ballari, catering Ballari, party hall Ballari, breakfast Ballari, North Indian restaurant Ballari">
+  <meta name="author" content="Hotel Atithi">
+  <meta name="theme-color" content="#c80032">
+
+  <link rel="icon" type="image/png" href="images/logo-icon.png">
+
+  <!-- Social sharing -->
+  <meta property="og:title" content="Hotel Atithi | Feel Like a Home">
+  <meta property="og:description" content="Pure vegetarian dining, traditional flavours, catering and celebrations in Ballari.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo-icon.png">
+
+  <!-- Hide the intro immediately when it already played in this browser session -->
+  <script>
+    try {
+      if (sessionStorage.getItem("hotelAtithiIntroPlayed") === "yes") {
+        document.documentElement.classList.add("intro-already-played");
+      }
+    } catch (error) {
+      /* Continue normally if browser storage is unavailable. */
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured business information -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Hotel Atithi",
+    "description": "Pure vegetarian restaurant, catering service and party hall in Ballari.",
+    "servesCuisine": ["South Indian", "North Indian", "Vegetarian"],
+    "telephone": "+91 99867 99662",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kamalashile Building, Basaveshwara Nagar, Sanganakal Road",
+      "addressLocality": "Ballari",
+      "addressRegion": "Karnataka",
+      "postalCode": "583103",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday", "Sunday"
+      ],
+      "opens": "07:00",
+      "closes": "22:00"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- =====================================================
+       INTRO VIDEO
+  ====================================================== -->
+  <div class="intro-video-screen" id="introVideoScreen">
+    <video
+      id="introVideo"
+      class="intro-video"
+      autoplay
+      muted
+      playsinline
+      preload="auto"
+    >
+      <source src="videos/hotel-atithi-intro.mp4" type="video/mp4">
+    </video>
+
+    <button class="intro-skip" id="introSkip" type="button">
+      Skip
+    </button>
+  </div>
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="#home" class="brand" aria-label="Hotel Atithi home">
+        <img
+          src="images/hotel-atithi-new.png"
+          alt="Hotel Atithi"
+          class="brand-name"
+        >
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-decoration decoration-one"></div>
+      <div class="hero-decoration decoration-two"></div>
+
+      <div class="hero-content">
+        <div class="hero-brand reveal">
+          <img
+            src="images/logo-icon.png"
+            alt="Hotel Atithi Logo"
+            class="hero-logo-icon"
+          >
+          <img
+            src="images/hotel-atithi-text.png"
+            alt="Hotel Atithi"
+            class="hero-logo-name"
+          >
+        </div>
+
+        <p class="hero-tagline reveal">Feel Like a Home</p>
+
+        <p class="hero-description reveal">
+          Delicious food, warm hospitality and memorable experiences —
+          served with the comfort of home.
+        </p>
+
+        <div class="hero-buttons reveal">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#catering" class="btn btn-secondary">Catering Services</a>
+        </div>
+
+        <a href="#about" class="scroll-down" aria-label="Scroll to our story">
+          <span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         OUR STORY
+    ====================================================== -->
+    <section class="story-section" id="about">
+      <div class="story-container">
+        <div class="story-heading reveal">
+          <p class="small-heading">OUR STORY</p>
+          <h2>
+            A Heritage Built Around
+            <span>Our Atithis</span>
+          </h2>
+        </div>
+
+        <div class="story-opening reveal">
+          <p class="story-lead">
+            Some journeys begin with a grand vision.<br>
+            Ours began with a small college canteen in
+            <strong>Ballari in 2011.</strong>
+          </p>
+
+          <p>
+            With humble beginnings, simple food and a heartfelt passion for
+            hospitality, we welcomed our first guests. From those early days,
+            one belief became the heart of Hotel Atithi:
+          </p>
+        </div>
+
+        <div class="story-quote reveal">
+          <span class="quote-mark">“</span>
+          <p>
+            Every customer is not just a customer —
+            <strong>they are our Atithi.</strong>
+          </p>
+        </div>
+
+        <div class="story-chapters">
+          <!-- OUR BEGINNING -->
+          <article class="story-chapter reveal">
+            <div class="story-chapter-image">
+              <img src="images/our-beginning.png" alt="The beginning of Hotel Atithi">
+              <div class="story-date">2017</div>
+            </div>
+
+            <div class="story-chapter-content">
+              <p class="story-chapter-label">OUR BEGINNING</p>
+              <h3>
+                A Small Beginning.
+                <span>A Meaningful Dream.</span>
+              </h3>
+
+              <p>
+                What began as a small college canteen in Ballari in 2011 took a new shape in 2017, when we opened the doors to our first Hotel Atithi restaurant.
+              </p>
+
+              <p>
+                It was built around simple food, sincere hospitality and the joy
+                of seeing a guest leave satisfied. Every plate we served and every
+                person we welcomed helped shape the values that would one day
+                become Hotel Atithi.
+              </p>
+
+              <div class="chapter-thought">
+                2011 — We started with a reason to serve.
+              </div>
+              <div class="chapter-thought">
+                2017 — The Canteen Became a Restaurant, and the Dream Grew Bigger.
+              </div>
+            </div>
+          </article>
+
+          <!-- OUR JOURNEY -->
+          <article class="story-chapter story-chapter-reverse reveal">
+            <div class="story-chapter-image">
+              <img src="images/our-journey.png" alt="The journey of Hotel Atithi">
+              <div class="story-date">2021</div>
+            </div>
+
+            <div class="story-chapter-content">
+              <p class="story-chapter-label">OUR JOURNEY</p>
+              <h3>
+                Growing Through
+                <span>Your Trust.</span>
+              </h3>
+
+              <p>
+                As the years passed, the support of our Atithis encouraged us
+                to dream a little bigger.
+              </p>
+
+              <p>
+                Our journey moved from the small canteen to Hotel Atithi on
+                Infantry Road in Ballari, welcoming more families and becoming
+                a part of their everyday dining experiences.
+              </p>
+
+              <p>
+                Soon, that trust travelled beyond our restaurant. Through catering,
+                Hotel Atithi became part of birthdays, family functions, gatherings
+                and some of life's most meaningful celebrations.
+              </p>
+
+              <div class="chapter-thought">
+                2021 — Our Atithis gave us the confidence to grow.
+              </div>
+            </div>
+          </article>
+
+          <!-- A NEW CHAPTER -->
+          <article class="story-chapter reveal">
+            <div class="story-chapter-image">
+              <img
+                src="images/hotel-atithi-building.png"
+                alt="Hotel Atithi Fine Dine and Party Hall"
+              >
+              <div class="story-date">2024</div>
+            </div>
+
+            <div class="story-chapter-content">
+              <p class="story-chapter-label">A NEW CHAPTER</p>
+              <h3>
+                Bigger Dreams.
+                <span>The Same Heart.</span>
+              </h3>
+
+              <p>
+                In December 2024, another chapter of the Hotel Atithi journey began.
+              </p>
+
+              <p>
+                Our new space brought together a premium pure vegetarian dining
+                experience, an A/C party hall and a larger vision for catering
+                and celebrations.
+              </p>
+
+              <p>
+                The surroundings became more refined, the possibilities became greater
+                and our ambitions continued to grow — but the reason behind everything
+                remained exactly the same.
+              </p>
+
+              <div class="chapter-thought">
+                2024 — The dream became bigger, while the heart stayed the same.
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="story-body reveal">
+          <p>
+            Yet, our greatest achievement has never been measured by how much we have grown.
+          </p>
+
+          <h3>
+            It is measured by how many people have made Atithi a part of their lives.
+          </h3>
+
+          <p>
+            Every family that returned, every celebration we hosted, every meal shared
+            and every Atithi who trusted us became part of our story.
+          </p>
+
+          <p>
+            Today, our spaces may be bigger, our experiences more refined and our dreams
+            even greater — but our heart remains the same.
+          </p>
+        </div>
+
+        <div class="story-closing reveal">
+          <img src="images/logo-icon.png" alt="Hotel Atithi" class="story-logo">
+
+          <p>
+            We want every Atithi who walks through our doors to experience something
+            familiar, warm and genuine.
+          </p>
+
+          <h2>Something that feels like a home.</h2>
+
+          <div class="story-signature">
+            <img src="images/hotel-atithi-text.png" alt="Hotel Atithi">
+          </div>
+
+          <div class="story-final-lines">
+            <strong>Where Every Customer Becomes Our Atithi.</strong>
+            <strong>Where Every Atithi Feels Like a Home.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SIGNATURE MENU
+    ====================================================== -->
+    <section class="signature-menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="small-heading">TASTE THE BEST OF ATITHI</p>
+          <h2>
+            Traditional Flavours,
+            <span>Memorable Experiences</span>
+          </h2>
+          <p class="section-description">
+            From our traditional South Indian thali and signature holiges to
+            comforting morning breakfast, rich North Indian favourites and
+            refreshing beverages — Hotel Atithi brings variety and familiar
+            flavours together.
+          </p>
+        </div>
+
+        <div class="thali-feature reveal">
+          <div class="thali-image">
+            <img src="images/atithi-thali.png" alt="Hotel Atithi Traditional South Indian Thali">
+          </div>
+
+          <div class="thali-content">
+            <p class="menu-label">OUR SIGNATURE</p>
+            <h3>
+              Atithi’s Special
+              <span>South Indian Thali</span>
+            </h3>
+            <p>
+              A traditional banana-leaf dining experience filled with authentic
+              flavours, wholesome accompaniments and the comforting taste of home.
+            </p>
+
+            <div class="thali-tags">
+              <span>Traditional</span>
+              <span>Pure Vegetarian</span>
+              <span>Banana Leaf</span>
+              <span>Authentic Flavours</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-highlight-grid">
+          <article class="menu-highlight-card reveal">
+            <div class="menu-highlight-image">
+              <img src="images/holige.jpg" alt="Signature Holiges">
+            </div>
+            <div class="menu-highlight-content">
+              <p class="menu-highlight-label">TRADITIONAL SPECIALITY</p>
+              <h3>Signature Holiges</h3>
+              <p>
+                Traditional, freshly prepared holiges in a variety of flavours —
+                one of the experiences our guests return for.
+              </p>
+            </div>
+          </article>
+
+          <article class="menu-highlight-card reveal">
+            <div class="menu-highlight-image">
+              <img src="images/breakfast.jpg" alt="South Indian Breakfast">
+            </div>
+            <div class="menu-highlight-content">
+              <p class="menu-highlight-label">MORNING FAVOURITES</p>
+              <h3>South Indian Breakfast</h3>
+              <p>
+                Start your morning with fresh and comforting South Indian breakfast
+                favourites served with familiar traditional accompaniments.
+              </p>
+            </div>
+          </article>
+
+          <article class="menu-highlight-card reveal">
+            <div class="menu-highlight-image">
+              <img src="images/north-indian.jpg" alt="North Indian Favourites">
+            </div>
+            <div class="menu-highlight-content">
+              <p class="menu-highlight-label">RICH & COMFORTING</p>
+              <h3>North Indian Favourites</h3>
+              <p>
+                Rich paneer preparations, flavourful curries, freshly made Indian
+                breads and satisfying dishes for lunch and dinner.
+              </p>
+            </div>
+          </article>
+
+          <article class="menu-highlight-card reveal">
+            <div class="menu-highlight-image">
+              <img src="images/starters.jpg" alt="Starters and Tandoori dishes">
+            </div>
+            <div class="menu-highlight-content">
+              <p class="menu-highlight-label">SOMETHING TO SHARE</p>
+              <h3>Starters & Tandoori</h3>
+              <p>
+                A wide selection of paneer, mushroom, baby corn, gobi and other
+                special vegetarian starters for every taste.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <article class="signature-menu-card beverages-card reveal">
+          <p class="menu-label">REFRESH & INDULGE</p>
+          <h3>Beverages & Desserts</h3>
+          <p>
+            Complete your meal with fresh juices, milkshakes, lassi, mocktails,
+            fruit salads and ice creams — with plenty of refreshing options for every mood.
+          </p>
+          <div class="mini-items">
+            <span>Fresh Juices</span>
+            <span>Lassi</span>
+            <span>Milkshakes</span>
+            <span>Mocktails</span>
+            <span>Ice Creams</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CATERING & PARTY HALL
+    ====================================================== -->
+    <section class="celebration-section" id="catering">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="small-heading">CELEBRATE WITH HOTEL ATITHI</p>
+          <h2>
+            Celebrations, Served
+            <span>The Atithi Way</span>
+          </h2>
+          <p class="section-description">
+            From intimate family gatherings to larger celebrations, Hotel Atithi
+            brings together pure vegetarian food, warm hospitality and thoughtful
+            service for every occasion.
+          </p>
+        </div>
+
+        <div class="celebration-feature reveal">
+          <div class="celebration-image">
+            <img
+              src="images/hotel-atithi-building.png"
+              alt="Hotel Atithi Fine Dine and A/C Party Hall"
+            >
+            <div class="celebration-photo-label">
+              <span>HOTEL ATITHI</span>
+              <strong>Fine Dine & A/C Party Hall</strong>
+            </div>
+          </div>
+
+          <div class="celebration-content">
+            <p class="menu-label">DINING • EVENTS • CATERING</p>
+            <h3>
+              Your Celebrations,
+              <span>Our Hospitality</span>
+            </h3>
+
+            <p>
+              Whether it is a birthday, family function, wedding celebration or
+              corporate gathering, Hotel Atithi helps bring your occasion together
+              with quality vegetarian food and warm service.
+            </p>
+
+            <p>
+              Our A/C Party Hall offers a comfortable space for celebrations,
+              while our catering team brings the flavours of Hotel Atithi to events
+              of different sizes.
+            </p>
+
+            <div class="celebration-highlights">
+              <div><strong>Pure Veg</strong><span>Catering</span></div>
+              <div><strong>A/C</strong><span>Party Hall</span></div>
+              <div><strong>Family</strong><span>Functions</span></div>
+              <div><strong>Corporate</strong><span>Events</span></div>
+            </div>
+
+            <div class="celebration-buttons">
+              <a
+                href="https://wa.me/919986799662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20enquire%20about%20catering%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                Catering Enquiry
+              </a>
+
+              <a
+                href="https://wa.me/919986799662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20enquire%20about%20the%20A%2FC%20Party%20Hall."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                Party Hall Enquiry
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-service-grid">
+          <article class="event-service-card reveal">
+            <div class="event-service-icon">♡</div>
+            <h3>Receptions</h3>
+            <p>
+              Pure vegetarian catering and warm hospitality for one of life's most
+              memorable celebrations.
+            </p>
+          </article>
+
+          <article class="event-service-card reveal">
+            <div class="event-service-icon">✦</div>
+            <h3>Birthdays & Family Functions</h3>
+            <p>
+              Celebrate birthdays, anniversaries and family occasions with food
+              everyone can enjoy together.
+            </p>
+          </article>
+
+          <article class="event-service-card reveal">
+            <div class="event-service-icon">◇</div>
+            <h3>Corporate Events</h3>
+            <p>
+              Thoughtfully planned vegetarian food and service for meetings,
+              gatherings and corporate occasions.
+            </p>
+          </article>
+
+          <article class="event-service-card reveal">
+            <div class="event-service-icon">✧</div>
+            <h3>A/C Party Hall</h3>
+            <p>
+              A comfortable space within Hotel Atithi for celebrations, gatherings
+              and special occasions.
+            </p>
+          </article>
+        </div>
+
+        <div class="celebration-closing reveal">
+          <p>
+            Every celebration deserves good food, thoughtful service and people you can trust.
+          </p>
+          <h3>Celebrate with Atithi.</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         GALLERY
+         Add this section back when real Hotel Atithi photos are ready.
+    ====================================================== -->
+
+    <!-- =====================================================
+         BRAND BANNER
+    ====================================================== -->
+    <section class="brand-banner">
+      <img src="images/logo-icon.png" alt="Hotel Atithi">
+      <div>
+        <p>HOTEL ATITHI</p>
+        <h2>Feel Like a Home</h2>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT & VISIT US
+    ====================================================== -->
+    <section class="visit-section" id="contact">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="small-heading">VISIT HOTEL ATITHI</p>
+          <h2>
+            Come In &
+            <span>Feel Like a Home</span>
+          </h2>
+          <p class="section-description">
+            Visit us for breakfast, lunch or dinner, or get in touch with us for
+            catering and party hall enquiries.
+          </p>
+        </div>
+
+        <div class="visit-layout">
+          <div class="visit-details reveal">
+            <div class="visit-info-card">
+              <div class="visit-info-icon">⌖</div>
+              <div>
+                <p class="visit-label">OUR LOCATION</p>
+                <h3>Hotel Atithi Veg</h3>
+                <p>
+                  Kamalashile Building,<br>
+                  Sanganakal Road,<br>
+                  KHB Colony, Basaveshwar Nagar,<br>
+                  Ballari, Karnataka – 583103
+                </p>
+              </div>
+            </div>
+
+            <div class="visit-info-card">
+              <div class="visit-info-icon">☎</div>
+              <div>
+                <p class="visit-label">CALL OR WHATSAPP</p>
+                <h3>Get in Touch</h3>
+                <div class="phone-list">
+                  <a href="tel:+919986799662">+91 99867 99662</a>
+                  <a href="tel:+917676599662">+91 76765 99662</a>
+                </div>
+                <p class="whatsapp-note">Both numbers are available on WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="visit-info-card">
+              <div class="visit-info-icon">◷</div>
+              <div>
+                <p class="visit-label">OPEN DAILY</p>
+                <h3>7:00 AM – 10:00 PM</h3>
+                <p>Open all days of the week.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-schedule reveal">
+            <p class="visit-label">SERVED THROUGH THE DAY</p>
+            <h3>
+              From Morning Breakfast
+              <span>to Dinner</span>
+            </h3>
+            <p class="meal-intro">
+              Our food selection changes through the day, so every service period
+              brings its own favourites and specialities.
+            </p>
+
+            <div class="meal-period">
+              <div class="meal-period-icon">☀</div>
+              <div>
+                <strong>Breakfast</strong>
+                <span>Fresh South Indian morning favourites</span>
+              </div>
+            </div>
+
+            <div class="meal-period">
+              <div class="meal-period-icon">◉</div>
+              <div>
+                <strong>Lunch</strong>
+                <span>Traditional thali, holige and lunch specialities</span>
+              </div>
+            </div>
+
+            <div class="meal-period">
+              <div class="meal-period-icon">◐</div>
+              <div>
+                <strong>Dinner</strong>
+                <span>North Indian favourites, breads, curries and more</span>
+              </div>
+            </div>
+
+            <div class="visit-buttons">
+              <a href="tel:+919986799662" class="btn btn-primary">Call Us</a>
+              <a
+                href="https://wa.me/919986799662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn whatsapp-button"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-map reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Hotel+Atithi+Veg+Kamalashile+Building+Sanganakal+Road+Ballari+Karnataka+583103&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Hotel Atithi location on Google Maps"
+          ></iframe>
+        </div>
+
+        <div class="contact-bottom reveal">
+          <p>
+            For restaurant, catering or party hall enquiries, contact either of our WhatsApp numbers.
+          </p>
+          <div>
+            <a
+              href="https://wa.me/919986799662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp: +91 99867 99662
+            </a>
+            <a
+              href="https://wa.me/917676599662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp: +91 76765 99662
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="images/logo-icon.png" alt="Hotel Atithi Logo" class="footer-logo-icon">
+        <img src="images/hotel-atithi-text.png" alt="Hotel Atithi" class="footer-logo-name">
+        <p class="footer-tagline">Feel Like a Home</p>
+        <p class="footer-description">
+          Pure vegetarian dining, traditional flavours, catering and celebrations —
+          served with the warmth of Atithi hospitality.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="#home">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Signature Menu</a>
+        <a href="#catering">Catering & Party Hall</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-column footer-contact-column">
+        <h3>Contact</h3>
+        <a href="tel:+919986799662">+91 99867 99662</a>
+        <a href="tel:+917676599662">+91 76765 99662</a>
+        <p>
+          Kamalashile Building,<br>
+          Basaveshwara Nagar,<br>
+          Sanganakal Road,<br>
+          Ballari, Karnataka
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Opening Hours</h3>
+        <div class="footer-hours">
+          <span>Open Daily</span>
+          <strong>7:00 AM – 10:00 PM</strong>
+        </div>
+        <p>Breakfast • Lunch • Dinner</p>
+
+        <div class="footer-whatsapp">
+          <a
+            href="https://wa.me/919986799662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp 99867 99662
+          </a>
+          <a
+            href="https://wa.me/917676599662?text=Hello%20Hotel%20Atithi%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp 76765 99662
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-message">
+      <span>Every Customer Becomes Our Atithi.</span>
+      <strong>Every Atithi Feels Like a Home.</strong>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Hotel Atithi. All Rights Reserved.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
